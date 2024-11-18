@@ -1,0 +1,7 @@
+input::placeholder {
+    color: rgb(94, 94, 247);
+}
+
+.absolute {
+    top: 100px;
+}

@@ -1,0 +1,74 @@
+<div class="container-fluid" >
+  <form action="" class="d-md-flex justify-content-center align-items-center" style="height: 100vh;" (ngSubmit)="saveProfile()">
+    <div class="position-relative d-inline-block mb-2 ms-5">
+      <div class="rounded-circle overflow-hidden border border-primary" style="width: 150px; height: 150px;">
+        <img [src]="profileData.picture || '/profile.png'" alt="" class="w-100 h-100" style="object-fit: cover;" [(ngModel)]="profileData.picture" name="picture">
+      </div>
+        <label class="position-absolute absolute end-0 p-2 bg-primary text-white rounded-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+            <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"/>
+          </svg>
+        <input type="file" class="form-control-file d-none" (change)="onFileChange($event)"
+        accept="image/*">
+      </label>
+    </div>
+
+
+    <div class="d-md-flex align-items-center">
+      <div class="mx-5">
+    <div class="">
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" id="name" [(ngModel)]="profileData.name" name="name" placeholder="Marvin Dee" id="name">
+    </div>
+    <div class="">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control border border-1 border-primary rounded" placeholder="marvindee@gmail.com"  [(ngModel)]="profileData.email" name="email" id="email">
+    </div>
+    <div class="">
+      <label for="date" class="form-label">Date of Birth</label>
+      <input type="date" class="form-control border border-1 border-primary rounded" id="dob" placeholder="20 January 1995" [(ngModel)] = "profileData.dob" name="dob">
+    </div>
+    <div class="">
+      <label for="permanent_address" class="form-label">Permanent Address</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" id="permanent_address" placeholder="No, 20 ado, mararaba" [(ngModel)]="profileData.permanent_address" name="permanent_address">
+    </div>
+    <div class="">
+      <label for="postal_code" class="form-label">Postal Code</label>
+      <input type="number" class="form-control border border-1 border-primary rounded" id="postal_code" placeholder="345689" [(ngModel)]="profileData.postal_code" name="postal_code">
+    </div>
+    </div>
+  
+
+
+    <div class="mx-5 mt-md-5">
+    <div class="">
+      <label for="username" class="form-label">User Name</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" placeholder="Marvindee" [(ngModel)]="profileData.username" id="username"  name="username">
+    </div>
+    <div class="">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control border border-1 border-primary rounded" id="password" [(ngModel)]="profileData.password" name="password" placeholder="**********">
+    </div>
+    <div class="">
+      <label for="present_address" class="form-label">Present Address</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" id="present_address" placeholder="No, 20 ado, mararaba" [(ngModel)]="profileData.present_address" name="present_address">
+    </div>
+    <div class="">
+      <label for="city" class="form-label">City</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" id="city" placeholder="Abuja" [(ngModel)]="profileData.city" name="city">
+    </div>
+    <div class="">
+      <label for="state" class="form-label">State</label>
+      <input type="text" class="form-control border border-1 border-primary rounded" id="state" placeholder="Abuja" [(ngModel)]="profileData.state" name="state">
+    </div>
+    
+    <div class="pt-3">
+      <button type="submit" class="btn btn-primary px-5">Save</button>
+    </div> 
+  </div>
+    
+  </div>
+   
+  </form>
+ 
+</div>
